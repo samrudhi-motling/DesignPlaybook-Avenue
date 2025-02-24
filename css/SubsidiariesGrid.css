@@ -1,0 +1,121 @@
+@import url("https://fonts.bunny.net/css?family=roboto:300");
+
+.subsidiaries-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #12061f;
+  color: #cdced0;
+}
+
+/* Title (Hidden by Default) */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f8ab55;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animate title when scrolled into view */
+.section-title.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide elements initially */
+.subsidiary-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When scrolled into view */
+.subsidiary-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay for each card */
+.subsidiary-card:nth-child(1) { transition-delay: 0.2s; }
+.subsidiary-card:nth-child(2) { transition-delay: 0.4s; }
+.subsidiary-card:nth-child(3) { transition-delay: 0.6s; }
+.subsidiary-card:nth-child(4) { transition-delay: 0.8s; }
+.subsidiary-card:nth-child(5) { transition-delay: 1s; }
+.subsidiary-card:nth-child(6) { transition-delay: 1.2s; }
+.subsidiary-card:nth-child(7) { transition-delay: 1.4s; }
+.subsidiary-card:nth-child(8) { transition-delay: 1.6s; }
+
+/* Grid Layout with Responsive Columns */
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* For medium screens (2 columns) */
+@media (min-width: 600px) {
+  .profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For large screens (4 columns) */
+@media (min-width: 1000px) {
+  .profiles {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Grid Item */
+.subsidiary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Logo */
+.subsidiary-logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect: scaling and glowing */
+.subsidiary-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.8);
+}
+
+.subsidiary-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Company Name */
+.subsidiary-name {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+/* Slide-up animation when visible */
+.subsidiary-card.animate .subsidiary-name {
+  opacity: 1;
+  transform: translateY(0);
+}
