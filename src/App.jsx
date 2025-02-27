@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Companies from "./components/Companies";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
-import SubsidiariesGrid from "./components/SubsidiariesGrid";
+// import SubsidiariesGrid from "./components/SubsidiariesGrid";
 
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
     <div className="bg-gray-900 min-h-screen text-white">
       <Navbar />
       <Hero />
-      <SubsidiariesGrid />
+      <Companies />
+      {/* <SubsidiariesGrid /> */}
       <About />
       <Services />
       <Footer />
