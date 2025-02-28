@@ -1,0 +1,10 @@
+const companies = [
+    { name: "Avenue Packs", img: "/images/24.jpg" },
+    { name: "Agrovan India", img: "/images/33.jpg" },
+    { name: "Avenue Corporation", img: "/images/38.jpg" },
+    { name: "La Ruche Food Stuffs", img: "/images/37.jpg" },
+    { name: "Avenue Buildcon", img: "/images/17.jpg" },
+    { name: "Agrovan Farm Producing Company", img: "/images/32.jpg" },
+    { name: "Sarvesh Petroleum - Sarvesh Petro Hub", img: "/images/13.jpg" },
+    { name: "Avenue Foundation", img: "/images/74.jpg" }
+  ];
