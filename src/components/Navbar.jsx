@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // ✅ Import Link for navigation
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -34,9 +35,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-10">
         {/* Logo */}
-        <a href="#" className="ml-6">
+        <Link to="/" className="ml-6">
           <img src="/images/2.png" alt="Avenue Logo" className="h-14" />
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="flex justify-center space-x-16 text-white font-semibold tracking-wide">
@@ -71,7 +72,8 @@ const Navbar = () => {
             <a href="#services" className="hover:text-yellow-400">Services</a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-yellow-400">Contact</a>
+            {/* ✅ Use Link for navigation to Contact page */}
+            <Link to="/contact" className="hover:text-yellow-400">Contact</Link>
           </li>
         </ul>
       </div>

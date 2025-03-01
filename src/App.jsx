@@ -1,27 +1,32 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Companies from "./components/Companies";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
-// import SubsidiariesGrid from "./components/SubsidiariesGrid";
-
+import Contact from "./pages/Contact"; // Import Contact page
 
 const App = () => {
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
-      <Navbar />
-      <Hero />
-      <Companies />
-      {/* <SubsidiariesGrid /> */}
-      <About />
-      <Services />
-      <Footer />
-
-      {/* Add other sections here */}
-      
-    </div>
+    <Router>
+      <div className="bg-gray-900 min-h-screen text-white">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Companies />
+              <About />
+              <Services />
+            </>
+          } />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
