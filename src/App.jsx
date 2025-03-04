@@ -8,6 +8,12 @@ import Services from "./components/Services";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact"; // Assuming you have this component
+import Overview from "./pages/Overview";
+
+/*colours must be :
+section title : #eca051
+major title : #e8e8ea
+backgrounf: #120620, #664384*/
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -42,6 +48,9 @@ const App = () => {
           
           {/* Contact Page Route */}
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Contact Page Route */}
+          <Route path="/overview" element={<Overview />} />
         </Routes>
         <Footer />
       </div>

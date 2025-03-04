@@ -16,9 +16,9 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center bg-gradient-to-b from-[#12061F] to-[#1A082A]">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 items-center gap-8">
-        {/* Left Content */}
-        <div className="md:col-span-6 text-center md:text-left animate-slide-in-left">
+      <div className="container mx-auto px-6 grid grid-cols-1 items-center gap-8 text-center">
+        {/* Left Content (Centered Text) */}
+        <div className="animate-slide-in-left">
           <h2 className="text-[#F8AB55] text-lg tracking-wide mb-2">
             Transforming Industries, Empowering Stakeholders
           </h2>
@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
 
           {/* Paragraph */}
-          <p className="text-[#CDCED0] text-lg leading-relaxed mt-4 w-[90%] md:w-[80%] text-left animate-fade-in transition-opacity duration-700 hover:opacity-80">
+          <p className="text-[#CDCED0] text-lg leading-relaxed mt-4 w-[90%] md:w-[80%] mx-auto text-center animate-fade-in transition-opacity duration-700 hover:opacity-80">
             At Avenue Group, we revolutionize industries through innovation,
             sustainability, and community-driven business practices. From
             empowering over 6,000 farmers to serving customers across 36+
@@ -50,24 +50,10 @@ const Hero = () => {
             Explore Our Vision
           </button>
         </div>
-
-        {/* Right Image */}
-        <div className="md:col-span-6 flex justify-center animate-slide-in-right">
-          <div className="relative w-[90%] max-w-[500px] h-auto flex items-center justify-center">
-            {/* Image Container */}
-            <div className="w-[80%] max-w-[400px] h-auto rounded-full overflow-hidden">
-              <img
-                src="/images/avenue-hero1.webp"
-                alt="Innovation"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Company Logos Section */}
-      <div className="absolute bottom-6 left-0 right-0 px-6 md:px-10 flex justify-center">
+      {/* <div className="absolute bottom-6 left-0 right-0 px-6 md:px-10 flex justify-center">
         <div className="flex flex-wrap gap-6 justify-center max-w-6xl mx-auto">
           {companyLogos.map((logo, index) => (
             <img
@@ -78,7 +64,7 @@ const Hero = () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
