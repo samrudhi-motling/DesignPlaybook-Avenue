@@ -8,20 +8,6 @@ import Mission from "../components/Mission";
 import Vision from "../components/Vision";
 import CoreValues from "../components/CoreValues";
 
-// const missionItems = [
-//   { icon: "fas fa-hand-holding-heart", text: "Empowering farmers & communities with sustainable solutions.", color: "text-[#eca051]" },
-//   { icon: "fas fa-industry", text: "Revolutionizing industries through advanced technology.", color: "text-[#eca051]" },
-//   { icon: "fas fa-globe", text: "Promoting environmental sustainability in all operations.", color: "text-[#eca051]" },
-//   { icon: "fas fa-users", text: "Fostering strong partnerships worldwide.", color: "text-[#eca051]" }
-// ];
-
-// const visionItems = [
-//   { icon: "fas fa-chart-line", text: "Becoming a global leader in industrial transformation.", color: "text-[#120620]" },
-//   { icon: "fas fa-rocket", text: "Leveraging cutting-edge technology for sustainable growth.", color: "text-[#120620]" },
-//   { icon: "fas fa-recycle", text: "Encouraging eco-friendly initiatives across all sectors.", color: "text-[#120620]" },
-//   { icon: "fas fa-handshake", text: "Expanding long-term collaborations for mutual success.", color: "text-[#120620]" }
-// ];
-
 const businessDivisions = [
   {
     name: "Avenue Packs",

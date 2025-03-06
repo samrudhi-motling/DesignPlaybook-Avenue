@@ -6,7 +6,7 @@ import Companies from "./components/Companies";
 import About from "./components/About";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
-import AboutUs from "./pages/AboutUs"; // Import About Us page
+import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Agrovan from "./pages/Agrovan";
 
