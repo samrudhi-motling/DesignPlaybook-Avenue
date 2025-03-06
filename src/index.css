@@ -3,3 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @keyframes bg-zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .animate-bg-zoom {
+    animation: bg-zoom 10s infinite alternate ease-in-out;
+  }
+   */

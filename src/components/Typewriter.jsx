@@ -32,7 +32,7 @@ const Typewriter = ({ texts, speed = 100, delay = 2000 }) => {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex, texts, speed, delay]);
 
-  return <span className="text-[#F8AB55]">{displayText}</span>;
+  return <span className="text-[#e8e8ea]">{displayText}</span>;
 };
 
 export default Typewriter;
