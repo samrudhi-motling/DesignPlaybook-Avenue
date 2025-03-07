@@ -26,7 +26,7 @@ export default function CoreValues() {
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-20 px-8 bg-[#a176d6] text-[#12061F] overflow-hidden">
+    <section ref={ref} className="relative py-20 px-8 bg-gradient-to-t from-[#120620] to-[#1b152294] text-[#12061F] overflow-hidden">
       {/* Decorative Feather Shapes */}
       <div className="absolute left-[-50px] top-10 md:left-[-100px] md:top-[-50px] z-[-1] opacity-20">
         <svg width="180" height="280" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ export default function CoreValues() {
 
       {/* Section Title */}
       <motion.h2
-        className="text-[#120620] text-4xl font-bold text-center mb-12 uppercase tracking-wide"
+        className="text-[#e8e8ea] text-4xl font-bold text-center mb-12 uppercase tracking-wide"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function CoreValues() {
         {coreValues.map((item, index) => (
           <motion.div
             key={index}
-            className="relative rounded-xl bg-white shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className="relative rounded-xl bg-[#a176d694] shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
@@ -66,7 +66,7 @@ export default function CoreValues() {
             {/* Text Section */}
             <div className="p-6 text-center">
               <h3 className="text-[#eca051] text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-[#12061F] text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-[#e8e8ea] text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>
         ))}

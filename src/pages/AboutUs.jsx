@@ -1,35 +1,54 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HistoryTimeline from "../components/HistoryTimeline";
-// import New_Hero from "../components/New_Hero";
 import Typewriter from "../components/Typewriter";
-// import About from "../components/About";
 import Mission from "../components/Mission";
 import Vision from "../components/Vision";
 import CoreValues from "../components/CoreValues";
+import OurBusiness from "../components/OurBusiness";
 
-const businessDivisions = [
-  {
-    name: "Avenue Packs",
-    desc: "Sustainable packaging solutions with zero carbon footprint.",
-    img: "/images/24.jpg"
-  },
-  {
-    name: "Agrovan India",
-    desc: "Supporting 6,000+ farmers & exporting globally.",
-    img: "/images/35.jpg"
-  },
-  {
-    name: "Avenue Corporation",
-    desc: "Your Automotive Components Trading Partner",
-    img: "/images/14.jpg"
-  },
-  {
-    name: "Avenue Buildcon",
-    desc: "Prominent land and building developer",
-    img: "https://www.avenuegroup.co/Projects/14.%20Avenue%20Promenade/Photos/1.jpg"
-  }
-];
+// const businessDivisions = [
+//   {
+//     name: "Avenue Packs",
+//     desc: "Innovative and sustainable packaging solutions with zero carbon footprint. Features EcoGauge for carbon emission tracking.",
+//     img: "/images/24.jpg"
+//   },
+//   {
+//     name: "Agrovan India",
+//     desc: "Empowering 6,000+ farmers with high-quality produce, state-of-the-art processing, and global exports to 36+ countries.",
+//     img: "/images/35.jpg"
+//   },
+//   {
+//     name: "Avenue Corporation",
+//     desc: "A trusted trading partner in automotive components, ensuring top-notch quality and reliability for the industry.",
+//     img: "/images/14.jpg"
+//   },
+//   {
+//     name: "Avenue Buildcon",
+//     desc: "A leading real estate developer in Pune, delivering high-quality, sustainable, and innovative infrastructure projects.",
+//     img: "https://www.avenuegroup.co/Projects/14.%20Avenue%20Promenade/Photos/1.jpg"
+//   },
+//   {
+//     name: "Agrovan Farm Producing Co.",
+//     desc: "Supporting farmers with direct collaboration, offering resources to boost productivity and drive sustainable growth.",
+//     img: "/images/36.jpg"
+//   },
+//   {
+//     name: "Sarvesh Petro Hub",
+//     desc: "A leading supplier of fuel and oil, ensuring reliable energy solutions for industries with a commitment to quality.",
+//     img: "/images/petroleum.webp"
+//   },
+//   {
+//     name: "La Ruche Food Stuffs",
+//     desc: "Dubai-based frozen food distribution chain, delivering high-quality products efficiently across the region.",
+//     img: "/images/laruche.webp"
+//   },
+//   {
+//     name: "Avenue Foundation",
+//     desc: "A social initiative dedicated to providing education and resources for underprivileged children, fostering equal opportunities.",
+//     img: "/images/41.jpg"
+//   }
+// ];
 
 // const MotionGridItem = ({ icon, text, color, textColor }) => (
 //   <motion.div
@@ -47,8 +66,6 @@ const businessDivisions = [
 const AboutUs = () => {
   return (
     <>
-      {/* <New_Hero /> */}
-      {/* <New_Hero /> */}
       {/* Custom Header */}
       <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -164,95 +181,10 @@ const AboutUs = () => {
 
 
         <HistoryTimeline />
-
-        {/* Business Divisions */}
-        <section className="py-16 px-8 bg-[#120620]">
-        <motion.h2
-        className="text-[#eca051] text-4xl font-bold text-center mb-12 uppercase tracking-wide"
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Our Businesses
-      </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {businessDivisions.map((biz, index) => (
-              <motion.div key={index} className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
-                <img src={biz.img} alt={biz.name} className="w-full h-60 object-cover" />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-6">
-                  <h3 className="text-xl font-bold text-[#eca051]">{biz.name}</h3>
-                  <p className="text-white text-sm mt-2">{biz.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        <Vision/>
-
-        <Mission/>
-
-        {/* Vision Section */}
-        {/* <section className="relative w-full bg-[#e8e8ea] text-[#12061F] px-6 md:px-12 lg:px-24 py-16">
-          <h3 className="text-[#120620] text-3xl font-bold text-center mb-6">Our Vision</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {visionItems.map((item, index) => (
-              <MotionGridItem key={index} {...item} textColor="text-[#12061F]" />
-            ))}
-          </div>
-        </section> */}
-
-        {/* Mission Section */}
-        {/* <section className="relative w-full bg-[#12061F] px-6 md:px-12 lg:px-24 py-20">
-          <h3 className="text-[#eca051] text-3xl font-bold text-center mb-6">Our Mission</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {missionItems.map((item, index) => (
-              <MotionGridItem key={index} {...item} textColor="text-[#e8e8ea]" />
-            ))}
-          </div>
-        </section> */}
-
-        {/* Core Values Section */}
-        {/* <section className="py-16 px-8 bg-[#e8e8ea] text-[#12061F]">
-          <h2 className="text-[#eca051] text-3xl font-bold text-center mb-8">Our Core Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Sustainability",
-                desc: "Committed to eco-friendly solutions, reducing carbon footprints, and fostering long-term environmental impact.",
-                img: "/images/30.png"
-              },
-              {
-                title: "Innovation",
-                desc: "Leading industrial transformation through advanced technology and smart investments.",
-                img: "/images/30.png"
-              },
-              {
-                title: "Community",
-                desc: "Empowering farmers, consumers, and stakeholders by fostering meaningful relationships and sustainable growth.",
-                img: "/images/30.png"
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="relative overflow-hidden hover:scale-105 transition-transform duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-              > */}
-                {/* Background Image (NO BORDERS, NO SHADOWS) */}
-                {/* <img src={item.img} alt={item.title} className="w-full h-100 object-cover block" /> */}
-
-                {/* Text Overlay (PERFECTLY CENTERED) */}
-                {/* <div className="absolute inset-0 flex flex-col justify-center items-center px-12 bottom-5">
-                  <h3 className="text-[#eca051] text-lg font-semibold">{item.title}</h3>
-                  <p className="text-white text-sm mt-2 text-center">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section> */}
-<CoreValues/>
+        <OurBusiness/>
+        <Vision />
+        <Mission />
+        <CoreValues />
 
       </div>
     </>

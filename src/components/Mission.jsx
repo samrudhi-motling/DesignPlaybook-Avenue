@@ -26,8 +26,16 @@ export default function Mission() {
      
       {/* Mission Section */}
       <section className="w-full bg-[#12061F] px-6 md:px-12 lg:px-24 py-20">
-        <h3 className="text-[#eca051] text-3xl font-bold text-center mb-6 uppercase tracking-wider">Our Mission</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {/* <h3 className="text-[#eca051] text-3xl font-bold text-center mb-6 uppercase tracking-wider">Our Mission</h3> */}
+        <motion.h2
+        className="text-[#e8e8ea] text-4xl font-bold text-center mb-10 uppercase tracking-wide"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Our Mission
+      </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {missionItems.map((item, index) => (
             <MotionGridItem key={index} {...item} />
           ))}

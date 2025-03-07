@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Companies from "./components/Companies";
@@ -9,10 +9,22 @@ import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Agrovan from "./pages/Agrovan";
+import Overview from "./pages/Overview";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="bg-gray-900 min-h-screen text-white">
         <Navbar />
         <Routes>
@@ -24,12 +36,14 @@ const App = () => {
                 <Companies />
                 <About />
                 <Services />
+                <Overview/>
               </>
             }
           />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/agrovan" element={<Agrovan />} />
+          <Route path="/overview" element={<Overview />} />
         </Routes>
         <Footer />
       </div>

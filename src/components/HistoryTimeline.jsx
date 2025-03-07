@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const historyData = [
   { year: "2024", title: "Founded", description: "Company was established with a vision for innovation." },
@@ -9,21 +9,24 @@ const historyData = [
 ];
 
 const HistoryTimeline = () => {
+  // 🔹 Create a ref to track visibility of the title
+  const titleRef = useRef(null);
+  const isInView = useInView(titleRef, { once: true });
+
   return (
-    <section
-      className="relative py-16 px-6 md:px-12 overflow-visible bg-cover bg-center"
-      // style={{
-      //   backgroundImage: `url('images/purple-bg.jpg')`,
-      // }}
-    >
+    <section className="relative py-16 px-6 md:px-12 overflow-visible bg-cover bg-center">
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#E8E8EA] text-center">
-          Our History
-        </h2>
-        {/* <p className="text-gray-300 text-center mt-3 max-w-2xl mx-auto">
-          A journey of excellence and innovation over the years.
-        </p> */}
+        
+        {/* 🔹 Animated Title with useInView */}
+        <motion.h2
+          ref={titleRef} // Attach ref to track visibility
+          className="text-[#e8e8ea] text-4xl font-bold text-center mb-12 uppercase tracking-wide"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}} // Use isInView correctly
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          Our Core Values
+        </motion.h2>
 
         {/* Timeline Section */}
         <div className="relative flex flex-col space-y-10 mt-12">
