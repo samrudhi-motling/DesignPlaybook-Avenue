@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Agrovan from "./pages/Agrovan";
+import Corporation from "./pages/Corporation";
 import Overview from "./pages/Overview";
 
 const ScrollToTop = () => {
@@ -36,7 +37,7 @@ const App = () => {
                 <Companies />
                 <About />
                 <Services />
-                <Overview/>
+                {/* <Overview/> */}
               </>
             }
           />
@@ -44,6 +45,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/agrovan" element={<Agrovan />} />
           <Route path="/overview" element={<Overview />} />
+          <Route path="/corp" element={<Corporation />} />
         </Routes>
         <Footer />
       </div>
