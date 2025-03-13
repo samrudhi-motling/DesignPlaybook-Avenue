@@ -7,7 +7,7 @@ const companies = [
     name: "Avenue Packs",
     description: "Innovative packaging solutions designed for global markets.",
     logo: "/images/packs-logo.png",
-    link: "",
+    link: "/pack",
   },
   {
     name: "Avenue Buildcon",
@@ -31,7 +31,7 @@ const companies = [
     name: "Avenue Corporation",
     description: "Trusted supplier of automotive components and solutions.",
     logo: "/images/corporation-logo.png",
-    link: "",
+    link: "/corp",
   },
   {
     name: "Sarvesh Petroleum",

@@ -21,6 +21,7 @@ const ScrollToTop = () => {
 
   return null;
 };
+import Pack from "./pages/Pack";
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/agrovan" element={<Agrovan />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/corp" element={<Corporation />} />
+          <Route path="/pack" element={<Pack />} />
         </Routes>
         <Footer />
       </div>
