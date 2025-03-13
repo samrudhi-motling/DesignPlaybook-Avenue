@@ -228,7 +228,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="container mx-auto px-4 py-12"
       >
         <div
@@ -242,7 +242,10 @@ const Agrovan = () => {
         >
           <div className="absolute inset-0 bg-[#120620] bg-opacity-60"></div>
           <div className="relative z-10 bg-[#664384] bg-opacity-80 rounded-lg m-8 p-8">
-            <h2 className="text-4xl font-bold text-[#eca051] mb-6">About Us</h2>
+            <h2 className="text-4xl font-bold text-[#eca051] mb-6 relative inline-block">
+              About Us
+              <span className="absolute bottom-[-4px] left-0 w-full h-1 bg-[#eca051]"></span>
+            </h2>
             <p className="text-[#e8e8ea] text-lg mb-4">
               At <span className="font-semibold">Agrovan</span>, we are committed to transforming the agricultural landscape by empowering farmers and delivering high-quality, sustainable products to consumers worldwide.
             </p>
@@ -261,7 +264,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="container mx-auto px-4 py-12"
       >
         <h2 className="text-3xl font-bold text-[#eca051] mb-6 text-center">Fresco Products</h2>
@@ -272,17 +275,17 @@ const Agrovan = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }} // Trigger animation every time
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
+              className="bg-[#664384] rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
             >
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-[#eca051] mb-2 text-center">{product.name}</h3>
+              <div className="p-2 flex flex-col justify-center items-center min-h-[80px]">
+                <h3 className="text-lg font-bold text-[#eca051] text-center">{product.name}</h3>
                 <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                   <div className="text-white text-center">
                     <p className="text-lg font-semibold">{product.description}</p>
@@ -299,7 +302,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="container mx-auto px-4 py-12"
       >
         <h2 className="text-3xl font-bold text-[#eca051] mb-6 text-center">Frozyn Products</h2>
@@ -310,17 +313,17 @@ const Agrovan = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }} // Trigger animation every time
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
+              className="bg-[#664384] rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
             >
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-[#eca051] mb-2 text-center">{product.name}</h3>
+              <div className="p-2 flex flex-col justify-center items-center min-h-[80px]">
+                <h3 className="text-lg font-bold text-[#eca051] text-center">{product.name}</h3>
                 <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                   <div className="text-white text-center">
                     <p className="text-lg font-semibold">{product.description}</p>
@@ -337,7 +340,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="container mx-auto px-4 py-12"
       >
         <h2 className="text-3xl font-bold text-[#eca051] mb-6 text-center">Canzo Products</h2>
@@ -348,17 +351,17 @@ const Agrovan = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }} // Trigger animation every time
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
+              className="bg-[#664384] rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
             >
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-[#eca051] mb-2 text-center">{product.name}</h3>
+              <div className="p-2 flex flex-col justify-center items-center min-h-[80px]">
+                <h3 className="text-lg font-bold text-[#eca051] text-center">{product.name}</h3>
                 <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                   <div className="text-white text-center">
                     <p className="text-lg font-semibold">{product.description}</p>
@@ -375,7 +378,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="container mx-auto px-4 py-12"
       >
         <h2 className="text-3xl font-bold text-[#eca051] mb-6 text-center">BiteFusion Products</h2>
@@ -386,17 +389,17 @@ const Agrovan = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }} // Trigger animation every time
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
+              className="bg-[#664384] rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
             >
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-[#eca051] mb-2 text-center">{product.name}</h3>
+              <div className="p-2 flex flex-col justify-center items-center min-h-[80px]">
+                <h3 className="text-lg font-bold text-[#eca051] text-center">{product.name}</h3>
                 <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                   <div className="text-white text-center">
                     <p className="text-lg font-semibold">{product.description}</p>
@@ -413,7 +416,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="container mx-auto px-4 py-12"
       >
         <h2 className="text-3xl font-bold text-[#eca051] mb-6 text-center">Spicix Products</h2>
@@ -424,17 +427,17 @@ const Agrovan = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }} // Trigger animation every time
               whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
+              className="bg-[#664384] rounded-lg shadow-lg overflow-hidden transition-transform duration-300 relative group"
             >
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-[#eca051] mb-2 text-center">{product.name}</h3>
+              <div className="p-2 flex flex-col justify-center items-center min-h-[80px]">
+                <h3 className="text-lg font-bold text-[#eca051] text-center">{product.name}</h3>
                 <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                   <div className="text-white text-center">
                     <p className="text-lg font-semibold">{product.description}</p>
@@ -451,7 +454,7 @@ const Agrovan = () => {
         variants={cardVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }} // Trigger animation every time
         className="text-center mt-12 pb-12"
       >
         <a

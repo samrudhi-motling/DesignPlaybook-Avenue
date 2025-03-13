@@ -107,6 +107,22 @@ const Navbar = () => {
                           >
                             {company}
                           </Link>
+                        ) : company === "Avenue Packs" ? (
+                          <Link
+                            to="/pack"
+                            className="hover:text-yellow-400 transition duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {company}
+                          </Link>
+                        ) : company === "Avenue Corporation" ? (
+                          <Link
+                            to="/corp"
+                            className="hover:text-yellow-400 transition duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {company}
+                          </Link>
                         ) : (
                           <span onClick={() => setIsMenuOpen(false)}>{company}</span>
                         )}
@@ -170,8 +186,16 @@ const Navbar = () => {
                       <Link to="/agrovan" className="hover:text-yellow-400 transition duration-200">
                         {company}
                       </Link>
+                    ) : company === "Avenue Packs" ? (
+                      <Link to="/pack" className="hover:text-yellow-400 transition duration-200">
+                        {company}
+                      </Link>
+                    ) : company === "Avenue Corporation" ? (
+                      <Link to="/corp" className="hover:text-yellow-400 transition duration-200">
+                        {company}
+                      </Link>
                     ) : (
-                      company
+                      <span>{company}</span>
                     )}
                   </li>
                 ))}

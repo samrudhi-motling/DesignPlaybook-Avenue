@@ -12,6 +12,14 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to handle scroll down
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight, // Scrolls down by one viewport height
+      behavior: "smooth", // Enables smooth scrolling
+    });
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
       {/* Animated Background Image (Fixed) */}
@@ -34,13 +42,13 @@ const Hero = () => {
 
       {/* Hero Content */}
       <motion.div 
-        className="relative z-10 px-6 md:px-12 bg-white/10 backdrop-blur-md p-10 rounded-xl shadow-lg border border-white/20"
+        className="relative z-10 px-4 sm:px-6 md:px-12 bg-white/10 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-xl shadow-lg border border-white/20"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         style={{ transform: `translateY(${offsetY * 0.3}px)` }} // Parallax Effect
       >
-        <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">
           Transforming Industries, <br />
           <span className="text-[#FFBF00]">
             <Typewriter
@@ -54,9 +62,10 @@ const Hero = () => {
             />
           </span>
         </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl opacity-90">
+        <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg md:text-xl opacity-90">
           Avenue Group creates value across multiple sectors while enhancing the lives of farmers and consumers alike.
         </p>
+        {/* Optional Button */}
         {/* <motion.button 
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -68,13 +77,13 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        className="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
+        onClick={handleScrollDown} // Add click handler to scroll down
       >
-        <ChevronDownIcon className="h-10 w-10 text-white opacity-80 hover:opacity-100 transition duration-300" />
+        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white opacity-80 hover:opacity-100 transition duration-300" />
       </motion.div>
-      
     </section> 
   );
 };

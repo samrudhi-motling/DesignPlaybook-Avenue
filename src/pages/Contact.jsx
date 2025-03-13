@@ -1,9 +1,26 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpen } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { ChevronDownIcon } from "@heroicons/react/24/outline"; // Import the down arrow icon
 
 const ContactPage = () => {
+  // Function to handle scroll down
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight, // Scrolls down by one viewport height
+      behavior: "smooth", // Enables smooth scrolling
+    });
+  };
+
   return (
-    <div className="relative bg-gradient-to-r from-[#4B0082] to-[#9370DB] text-white">
+    <div
+      className="relative text-white"
+      style={{
+        backgroundImage: "url('/images/444.jpg')", // Local background image
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed", // Optional: Makes the background fixed while scrolling
+      }}
+    >
       {/* Hero Section */}
       <motion.div
         className="relative bg-cover bg-center h-[400px] flex flex-col items-center justify-center text-center px-4"
@@ -29,34 +46,20 @@ const ContactPage = () => {
         >
           Get in touch with us for any queries or collaborations.
         </motion.p>
-      </motion.div>
 
-      {/* Background Wave - Moved Behind Content */}
-      <div className="absolute bottom-0 left-0 w-full -z-10">
-        <svg
-          className="w-full"
-          viewBox="0 0 1440 320"
-          preserveAspectRatio="none"
+        {/* Scroll Down Arrow */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          onClick={handleScrollDown} // Add click handler to scroll down
         >
-          <path
-            fill="black"
-            fillOpacity="1"
-            d="M0,288L48,261.3C96,235,192,181,288,170.7C384,160,480,192,576,202.7C672,213,768,203,864,181.3C960,160,1056,128,1152,106.7C1248,85,1344,75,1392,69.3L1440,64L1440,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
+          <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white opacity-80 hover:opacity-100 transition duration-300" />
+        </motion.div>
+      </motion.div>
 
       {/* Contact Section */}
       <div className="relative container mx-auto px-6 py-16">
-        <motion.div
-          className="text-center mb-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-3xl font-bold text-white">Contact For Any Query</h2>
-        </motion.div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {/* Google Map */}
           <motion.iframe
@@ -167,4 +170,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
