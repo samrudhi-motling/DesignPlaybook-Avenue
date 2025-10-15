@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
     <section 
       className="relative py-20 flex justify-center overflow-hidden text-white bg-cover bg-center" 
-      style={{ backgroundImage: "url('/images/878.jpg')" }} // Set your image path
+      style={{ backgroundImage: "url('/images/878.jpg')" }}
     >
       {/* Animated Overlay */}
       <motion.div 
@@ -19,32 +19,35 @@ const AboutSection = () => {
         <motion.div 
           className="bg-white bg-opacity-10 backdrop-blur-xl rounded-3xl p-12 shadow-2xl flex flex-col md:flex-row items-center gap-10"
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           {/* Content Column */}
           <motion.div 
             className="w-full md:w-2/3 px-4 text-left"
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="relative">
               <div className="mb-6">
                 <motion.div 
                   className="text-[#F8AB55] text-md font-semibold uppercase relative inline-block pb-2 tracking-wide"
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.2 }}
                 >
                   About Us
                 </motion.div>
                 <motion.h2 
                   className="text-4xl md:text-5xl font-extrabold leading-tight tracking-wide text-white drop-shadow-lg"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8 }}
+                  viewport={{ once: true, amount: 0.2 }}
                 >
                   Excellence in Interior Solutions
                 </motion.h2>
@@ -52,19 +55,20 @@ const AboutSection = () => {
               <motion.p 
                 className="text-lg leading-relaxed mb-6 text-[#CDCED0] max-w-xl"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 Avenue Group specializes in delivering cutting-edge interior solutions, 
                 transforming spaces with innovative designs and high-quality materials.
               </motion.p>
-              {/* Use Link instead of anchor tag */}
-              <Link to="/about">
+              <Link to="/about-us">
                 <motion.button
                   className="inline-block mt-6 px-6 py-3 text-lg font-bold uppercase bg-[#F8AB55] text-[#5825A6] rounded-lg transition-all hover:text-white hover:shadow-2xl"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true, amount: 0.2 }}
                 >
                   Read More
                 </motion.button>
@@ -75,8 +79,11 @@ const AboutSection = () => {
           {/* Image Column */}
           <motion.div 
             className="w-full md:w-1/3 flex justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 100 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <img
               src="/images/9.png"
@@ -84,7 +91,6 @@ const AboutSection = () => {
               className="w-full max-w-[280px] rounded-xl"
             />
           </motion.div>
-
         </motion.div>
       </div>
     </section>

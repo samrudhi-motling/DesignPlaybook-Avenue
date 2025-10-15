@@ -35,7 +35,7 @@ const AvenueCorporation = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#120620] to-[#664384] text-white">
       {/* Hero Section */}
-      <div className="relative h-[400px] overflow-hidden">
+      <div className="relative h-[700px] overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={0}

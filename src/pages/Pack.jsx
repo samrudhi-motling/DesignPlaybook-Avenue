@@ -18,7 +18,7 @@ const Pack = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newScale = Math.max(0.8, 1 - scrollY / 1000); // Scale down based on scroll
+      const newScale = Math.max(0.8, 1 - scrollY / 1000);
       setScale(newScale);
     };
 

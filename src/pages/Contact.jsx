@@ -123,23 +123,23 @@ const ContactPage = () => {
           >
             <h5 className="text-xl font-semibold">Get In Touch</h5>
             <p className="text-gray-300">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+              Reach out to us for any inquiries or business collaborations.
             </p>
             {[
               {
                 icon: <FaMapMarkerAlt className="text-purple-800 text-2xl" />,
                 title: "Office",
-                text: "123 Street, New York, USA",
+                text: "Office No : 310, R-3, Arzoo Building, 3rd floor Near Al Qusais -2 Metro Station Dubai 56808- U.A.E",
               },
               {
                 icon: <FaPhoneAlt className="text-purple-800 text-2xl" />,
-                title: "Mobile",
-                text: "+012 345 67890",
+                title: "Phone",
+                text: "+91 8888890059\n+9120-69000098",
               },
               {
                 icon: <FaEnvelopeOpen className="text-purple-800 text-2xl" />,
                 title: "Email",
-                text: "info@example.com",
+                text: "support@avenueindia.co.in",
               },
             ].map((item, index) => (
               <motion.div
@@ -156,7 +156,7 @@ const ContactPage = () => {
                   <h5 className="text-white text-lg font-semibold">
                     {item.title}
                   </h5>
-                  <p>{item.text}</p>
+                  <p className="text-gray-300 whitespace-pre-line">{item.text}</p>
                 </div>
               </motion.div>
             ))}
